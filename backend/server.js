@@ -1,25 +1,35 @@
-//import modules
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const morgan = require('morgan');
 const cors = require('cors');
-require("dotenv").config();
+const cookieParser = require('cookie-parser');
 
-//app
 const app = express();
 
-//db
+app.use(express.json());
+app.use(cors());
+app.use(cookieParser());
 
+const port = process.env.PORT || 5000;
+const URL = process.env.MONGO_URI;
 
-//middleware
-app.use(morgan("dev"));
-app.use(cors({origin:true, credentials:true}));
+mongoose.connect(URL, {
+   // useCreateIndex: true,
+   // useFindAndModify: false,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 
-//routes
+mongoose.connection.on('connected', () => {
+    console.log('MongoDB connected successfully');
+});
 
-//port
-const port = process.env.PORT || 8080;
+mongoose.connection.on('error', (err) => {
+    console.error('Error connecting to MongoDB:', err);
+});
 
-//listener
-const server = app.listen(port, ()=>console.log('Server is running on port ${port}'));
+app.get('/', (req, res) => {
+    res.status(500).send("hello world");
+});
 
+app.listen(port, () => console.log(`app is running on ${port}`));
