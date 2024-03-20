@@ -3,13 +3,19 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const productRouter = require('./routers/ProductRouter');
+const adRouters = require('./routers/AdRouters');
  
 const app = express();
  
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
- 
+
+
+app.use('/api', productRouter);
+app.use('/',adRouters);
+
 const port = process.env.PORT || 5000;
 const URL = process.env.MONGO_URI;
  
