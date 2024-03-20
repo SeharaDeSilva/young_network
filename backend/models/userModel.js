@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 //create a schema
 //convert the schema to model.
 
-const userModel = mongoose.Schema({
+const UserSchema = mongoose.Schema({
     firstName :{
         type: String,
         required: true,
@@ -32,6 +32,9 @@ const userModel = mongoose.Schema({
     skills : {
         type : String,
     },
+
+    friends : [{type : mongoose.Types.ObjectId, ref:'User'}],
+    friends : [{type : mongoose.Types.ObjectId, ref:'User'}]
 
 });
 

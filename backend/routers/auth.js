@@ -1,4 +1,4 @@
-const express = require ("express");
+/*const express = require ("express");
 const User = require('../models/userModel');
 const bcrypt = require("bcrypt");
 
@@ -39,4 +39,4 @@ router.post("/register", async (req,res) => {
     const userToReturn = {...newUser.toJson(),  token};
     delete userToReturn.password;
     return res.status(200).json(userToReturn);
-});
+});*/
