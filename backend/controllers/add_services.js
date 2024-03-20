@@ -3,11 +3,11 @@ const addservice = require("../models/add_services")
 const mongoose = require("mongoose")
 
 
-export const Makeservice = async(req,res) => {
+const Makeservice = async(req,res) => {
     try {
         const {serviceCategory, addDescription, addImage} = req.body
         console.log(req.body)
-        const newService = await AddServiceSchema.create({serviceCategory, addDescription, addImage})
+        const newService = await addservice.create({serviceCategory, addDescription, addImage})
         res.status(202).json({"newservice": newService})
     } catch (error) {
         res.status(500).json({"msg": error.message})
@@ -21,7 +21,7 @@ export const Makeservice = async(req,res) => {
     return res.status(200).json({addservices});*/
 }
 
-export const Updateservice = async (req, res) => {
+const Updateservice = async (req, res) => {
 
     try {
         console.log("in backend");
@@ -38,7 +38,7 @@ export const Updateservice = async (req, res) => {
     }
 }
 
-export const Deleteservice = async (req, res) => {
+const Deleteservice = async (req, res) => {
     
     try{
         const {ServiceId} = req.params
@@ -49,7 +49,7 @@ export const Deleteservice = async (req, res) => {
     }
 }
 
-export const Readservice = async (req, res) => {
+const Readservice = async (req, res) => {
     try{
         const resultSet = await AddServiceSchema.find({})
         res.status(200).json({"result" : resultSet})

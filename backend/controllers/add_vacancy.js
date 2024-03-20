@@ -3,9 +3,9 @@ const mongoose = require("mongoose")
 
 const Makevacancy = async (req, res) => {
     try {
-        const {JobPosition, JobLocation, Skill, JobDescription, JobImage} = req.body
+        const {JobPosition, JobLocation, Skills, JobDescription, JobImage} = req.body
         console.log(req.body);
-        const newVacancy = await AddVacancySchema.create({JobPosition, JobLocation, Skill, JobDescription, JobImage})
+        const newVacancy = await AddVacancySchema.create({JobPosition, JobLocation, Skills, JobDescription, JobImage})
         res.status(202).json({"newvacancy": newVacancy})
     } catch (error) {
         res.status(500).json({"msg": error.message})
