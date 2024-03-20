@@ -42,11 +42,27 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
+
 const app = express();
+
+//Middleware for parsing URL-encoded bodies
 
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
+app.use(express.urlencoded({extended : true}));
+
+
+//routes configuration
+
+//const add_servicesRoute = require('./routers/add_services.js');
+const add_vacancyRoute = require('./routers/add_vacancy.js')
+
+//app.use('/add_services', add_servicesRoute)
+app.use('/add_vacancy', add_vacancyRoute)
+
+
+//mongo setup
 
 const port = process.env.PORT || 5000;
 const URL = process.env.MONGO_URI;
