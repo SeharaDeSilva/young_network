@@ -103,7 +103,7 @@ const authController = {
 
         }
     },
-    generateAccessToken : async(req,res) =>{
+    /*generateAccessToken : async(req,res) =>{
         try {
             const rf_token = req.cookies.refreshtoken;
             if(!rf_token) return res.status(400).json({msg:"please login now"})
@@ -127,8 +127,34 @@ const authController = {
             res.status(500).json({msg:err.message});
 
         }
+    }*/
+    generateAccessToken: async (req, res) => {
+        try {
+            const rf_token = req.cookies.refreshtoken;
+            if (!rf_token) return res.status(400).json({ msg: "Please login now" });
+    
+            jwt.verify(rf_token, process.env.REFRESHTOKENSECRET, async (err, result) => {
+                if (err) {
+                    console.error(err);
+                    return res.status(400).json({ msg: "Invalid refresh token" });
+                }
+    
+                const user = await User.findById(result.id).select("-password");
+                if (!user) return res.status(400).json({ msg: "User does not exist" });
+    
+                const access_token = createAccessToken({ id: result.id });
+    
+                res.json({
+                    access_token,
+                    user
+                });
+            });
+        } catch (err) {
+            console.error(err);
+            res.status(500).json({ msg: err.message });
+        }
     }
-
+    
 }
 
 const createAccessToken = (payload) =>{
