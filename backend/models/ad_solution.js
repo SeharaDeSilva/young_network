@@ -14,7 +14,7 @@ const AdSolutionSchema = new mongoose.Schema({
 
     imageURL: {
         type: String,
-        require: true,
+        //require: true,
     },
 });
 
