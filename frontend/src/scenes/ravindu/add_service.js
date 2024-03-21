@@ -1,8 +1,4 @@
-import './add_service.css'
-//import { useState, useEffect } from 'react'
-import axios from 'axios'
-//import serviceIMG from './Images/serviceIMG1.png';
-
+//import './add_service.css'
 
 
 export default function Add_service() {
