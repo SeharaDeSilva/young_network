@@ -3,7 +3,9 @@ const auth = require('../middlewares/auth');
 const userController = require('../controllers/userController')
 
 //router.get('/search',auth, userController.searchUser)
-router.get('/user/id',auth, userController.getUser);
-router.patch('/user',auth,userController.updateUser);
+router.get('/user/:id', userController.getUser);
+router.put('/user/update/:id', userController.updateUser);
+router.delete('/user/delete/:id', userController.deleteUser);
+
 
 module.exports = router;

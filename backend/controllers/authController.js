@@ -66,8 +66,8 @@ const authController = {
             if(!isMatch) return res.status(400).json({msg: 'User password is not incorrect'})
 
 
-            const access_token = createAccessToken({id : user._id});
-            const refresh_token = createRefreshToken({id : user._id});
+            const access_token = createAccessToken({id : user.email});
+            const refresh_token = createRefreshToken({id : user.email});
             //console.log({access_token, refresh_token});
 
             res.cookie('refreshtoken', refresh_token),{
