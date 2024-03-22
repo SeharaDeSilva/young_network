@@ -1,0 +1,87 @@
+.full-page {
+    
+    width: 100%; /* Set full width of viewport */
+    /*height: 100vh; /* Set full height of viewport */
+    overflow: auto;
+  }
+
+
+.editvacancy{
+    
+    gap: 1rem;
+    /*height: 100vh;*/
+   /* width: 100vw;*/
+    margin: 0;
+    padding: 0;
+}
+
+.editimage{
+    /*align-items: center;*/
+    width: 500px;
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+    margin-left: 10px;
+    border-radius: 15px;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border:none;
+    border-radius: 0.5rem;
+    background: #7900C8;
+    transition:all 100ms ease-out;
+    height: 40px;
+    width: 80px;
+    
+  }
+  
+  .button:hover{
+    cursor: pointer;
+    color: #7900C8;
+    background: transparent;
+    border: 2px solid #7900C8;
+  }
+
+  .ps-button {
+    /*height: 2rem;*/
+    /*padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;*/
+    font-size: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh; /* Center content vertically */
+    background-color: #f0f0f0; /* Background color for the entire page */
+    overflow: auto;
+  }
+  
+  .form-frame {
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 3px solid #7900C8;
+    border-radius: 10px;
+    background-color: #fff; /* Background color for the frame */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow effect */
+  }
+  
+  .form-frame h1 {
+    text-align: center;
+  }
+  
+.buttoncontainer{
+    display: flex;
+}
