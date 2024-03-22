@@ -11,6 +11,8 @@ const homepage = () => {
       <ProfileSide/>
       <PostSide/>
       <div className= "RightSide">RightSide</div>
+      
+
 
     </div>
   )
