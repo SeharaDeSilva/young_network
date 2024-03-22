@@ -4,3 +4,10 @@
     grid-template-columns: 18rem auto 20rem;
     gap: 1rem;
 }
+
+.App{
+    overflow: auto;
+    color: var(--black);
+    background: #f3f3f3;
+    padding: 1rem 1rem;
+  }

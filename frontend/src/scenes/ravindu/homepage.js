@@ -3,10 +3,9 @@ import './Homepage.css'
 import ProfileSide from './components/ProfileSide'
 import PostSide from './components/PostSide/PostSide'
 
-
 const homepage = () => {
   return (
-    <div className="home">
+    <div className="home app" style = {{top: '-18%', right: '0'}}>
       
       <ProfileSide/>
       <PostSide/>
