@@ -1,9 +1,8 @@
 import React from 'react'
 import './add_service.css'
-//import CoverImg from './Images/serviceIMG1.jpg'
-//import ProfileImg from './Images/profileimg1.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+//import Header from './components/Header/Header'
 
 
 const AddVacancy = () => {

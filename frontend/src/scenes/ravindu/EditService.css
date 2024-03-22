@@ -1,3 +1,10 @@
+.App{
+  overflow: auto;
+  color: var(--black);
+  background: #f3f3f3;
+  padding: 1rem 1rem;
+}
+
 .full-page {
     
     width: 100%; /* Set full width of viewport */

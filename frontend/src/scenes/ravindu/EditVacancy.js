@@ -5,6 +5,13 @@ import post1 from './Images/post1.jpg'
 
 const EditVacancy = () => {
   return (
+
+    <div>
+
+<div style={{textAlign: 'center'}}>
+    <h2>Manage Vacancies</h2>
+    </div>
+
     <div className='editvacancy container'>
       
       <div>
@@ -37,7 +44,7 @@ const EditVacancy = () => {
 
       
         
-      
+      </div>
       
     </div>
   )

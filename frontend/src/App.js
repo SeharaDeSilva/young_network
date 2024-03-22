@@ -7,6 +7,7 @@ import EditVacancy from './scenes/ravindu/EditVacancy'
 import EditService from './scenes/ravindu/EditService'
 import AddVacancy from './scenes/ravindu/AddVacancy'
 import AddService from './scenes/ravindu/add_service'
+import EmployeeDashboard from './scenes/ravindu/EmployeeDashboard';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/EditService" element={<EditService />} />
           <Route path="/AddVacancy" element={<AddVacancy />} />
           <Route path="/AddService" element={<AddService />} />
+          <Route path="/EmployeeDashboard" element={<EmployeeDashboard />} />
         </Routes>
       </BrowserRouter>
        
