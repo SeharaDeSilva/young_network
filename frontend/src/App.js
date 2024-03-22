@@ -5,13 +5,15 @@ import AddServicePage from './scenes/ravindu/add_service'
 import Homepage from './scenes/ravindu/homepage'
 import EditVacancy from './scenes/ravindu/EditVacancy'
 import EditService from './scenes/ravindu/EditService'
+import AddVacancy from './scenes/ravindu/AddVacancy'
+import AddService from './scenes/ravindu/add_service'
 
 function App() {
   return (
     <div className="App">
 
-<div className="blur" ></div>
-      <div className="blur"></div>
+
+      
 
       <BrowserRouter>
         <Routes>
@@ -19,6 +21,8 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/EditVacancy" element={<EditVacancy />} />
           <Route path="/EditService" element={<EditService />} />
+          <Route path="/AddVacancy" element={<AddVacancy />} />
+          <Route path="/AddService" element={<AddService />} />
         </Routes>
       </BrowserRouter>
        
