@@ -1,11 +1,22 @@
 
 import './App.css';
+//import LoginSignup from './Components/LoginSignup/LoginSignup';
+import Profile from './Components/Profile/profile';
+
 
 function App() {
   return (
-    <div className="App">
-     <h>hello world</h>
-    </div>
+   /* <div>
+    <LoginSignup/>
+   
+    </div>*/
+    <div><Profile/></div>
+     
+  
+    
+    
+    
+
   );
 }
 
