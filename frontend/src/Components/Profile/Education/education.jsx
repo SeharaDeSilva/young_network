@@ -1,16 +1,16 @@
 import React from 'react'
-import "./education.css"
+import "./experience.css"
 const experience = () => {
     
   return (
     <div>
         <div className="excard">
             <div className="exHead">
-                <h4>Education</h4>
+                <h4>Experience</h4>
             </div>
             <div className="exInfo">
               <span>
-                <b>Master in Computer Science and Software Engineering</b>
+                <b>Software Engineer</b>
               </span><br/>
               <span>
                  May 2022 - Present · 1 yr 11 mos

@@ -88,12 +88,15 @@ const Profile = () => {
 
           <div className="profileInfo">
             {
+
               isEditting ?
                 <div style={{
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
                   justifyContent: "start"
+                  
+                  
                 }}>
                   <input type='text' style={{
                     maxWidth: "400px",
@@ -112,7 +115,9 @@ const Profile = () => {
                 </div>
                 :
                 <h4 className="profileName">{userInfo.firstName + " " + userInfo.lastName}</h4>
-            }
+            
+
+}
             <span className="profileInfoDesc">{""}</span>
           </div>
           <button onClick={() => setIsEditting(true)}>Change Name</button>

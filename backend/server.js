@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const authRouter = require('./routers/authRouter');
 const userRouter = require('./routers/userRouter');
 const app = express();
+const aboutRouter = require('./routers/aboutRouter');
 
 app.use(express.json());
 app.use(cors());
@@ -17,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 //routes
 app.use('/api',authRouter);
 app.use('/api',userRouter);
-
+app.use('/api',aboutRouter);
 const port = process.env.PORT || 5000;
 const URL = process.env.MONGO_URI;
 
